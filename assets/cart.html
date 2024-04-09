@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Game BonanZa</title>
+    <link rel="icon" type="image/png" href="logo-small.png">
+    <link rel="stylesheet" href="style3.css">
+    <script src="script3.js"></script>
+    <style>
+      .dropbtn1 {
+        background-color: #4CAF50;
+        color: white;
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+      }
+      
+      .dropdown1 {
+        position: relative;
+        display: inline-block;
+      }
+      
+      .dropdown-content1 {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+      }
+      
+      .dropdown-content1 a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+      
+      .dropdown-content1 a:hover {background-color: #f1f1f1}
+      
+      .dropdown1:hover .dropdown-content1 {
+        display: block;
+      }
+      
+      .dropdown1:hover .dropbtn1 {
+        background-color: #3e8e41;
+      }
+      </style>
+</head>
+<body>
+  
+  <nav class="desktop_navbar">
+    <a href="index3.html"><img class="desktop_navbar_logo_img" src="Logo.png" alt="logo"></a>
+    <div class="desktop_navbar_link2_div">
+        
+        <a href="chat.html" class="desktop_navbar_link2 scroll">Chat!</a>
+    </div>
+  </nav>
+  
+  </div>
+  <div class="mobile_navbar">
+    <a href="#" class="mobile_navbar_logo_img_a"><img class="mobile_navbar_logo_img" src="logo-small.png" alt="logo"></a>
+    <div id="mobile_navbar_links">
+        <a class="mobile_navbar_link scroll" onclick="mobile_navbar_link_hider()" href="chat.html">Chat</a>
+      </div>
+      <div class="icon" onclick="mobile_navbar_link_hider()">
+          <i class="fa fa-bars"></i>
+      </div>
+      <script>
+          function mobile_navbar_link_hider() {
+          var x = document.getElementById("mobile_navbar_links");
+          if (x.style.display === "flex") {
+              x.style.display = "none";
+          } else {
+              x.style.display = "flex";
+          }
+          } 
+      </script>
+  </div>
+    <div id="more"></div>
+      <div class="main2">
+        
+        <h2>Welcome <span id="username" style=color:white></span></h2>
+    <!-- Other content of your cart page goes here -->
+    <script>
+      // Function to get query parameters from URL
+      function getQueryParam(name) {
+          const urlParams = new URLSearchParams(window.location.search);
+          return urlParams.get(name);
+      }
+
+      // Get username from query parameter
+      const username = getQueryParam('username');
+
+      // Display username in cart.html
+      document.getElementById('username').textContent = username;
+  </script>
+    <div class="games">
+      <a class="headline">Wanna play</a>
+      <br><br>
+      <div class="desktop_navbar_link2">
+      <div class="dropdown1">
+        <button class="dropbtn1">Online Games</button>
+        <div class="dropdown-content1">
+        <a href="tennis.html">Table Tennis</a>
+        <a href="xoxo.html">Xoxo</a>
+        <a href="sps.html">Stone paper Scissors</a>
+        </div>
+      </div>
+    </div>
+    
+    
+
+<br>
+        <a class="headline">What we have</a>
+        <div class="main2_features_div">
+          <div class="main2_feature">
+            <img class="main2_feature_img" alt="Feature Image" src="1.png">
+            <a class="main2_feature_headline">1. Species</a>
+            <a class="main2_feature_text">The game features stunning visuals, captivating storytelling, and engaging gameplay mechanics.</a>
+          </div>
+          <div class="main2_feature">
+            <img class="main2_feature_img" alt="Feature Image" src="2.png">
+            <a class="main2_feature_headline">2. Decrypto</a>
+            <a class="main2_feature_text">The game is played over a series of rounds, with each round presenting a new set of coded words or phrases.</a>
+          </div>
+          <div class="main2_feature">
+            <img class="main2_feature_img" alt="Feature Image" src="3.png">
+            <a class="main2_feature_headline">3. World Wonders</a>
+            <a class="main2_feature_text">Players take turns rolling dice or spinning a spinner to move their game pieces across the board, visiting different world wonders along the way.</a>
+          </div>
+          <div class="main2_feature">
+            <img class="main2_feature_img" alt="Feature Image" src="4.png">
+            <a class="main2_feature_headline">4. Sounds Fishy</a>
+            <a class="main2_feature_text">Players take turns drawing cards from the deck and listening to the sounds depicted on the cards.</a>
+          </div>
+          <div class="main2_feature">
+            <img class="main2_feature_img" alt="Feature Image" src="5.png">
+            <a class="main2_feature_headline">5. San Francisco</a>
+            <a class="main2_feature_text">Players collect tickets representing various destinations within the city, such as the Golden Gate Bridge.</a>
+          </div>
+        </div>
+      </div>
+      <div class="gamescontainer">
+        <h2>Game Slot Booking</h2>
+        <div class="game-slots">
+          <div class="slot" data-price="350" data-booked="false">
+            <h3>Game Slot 1</h3>
+            <p>Date: 10th March 2024</p>
+            <p>Time: 10:00 AM - 12:00 PM</p>
+            <p>Price: Rs. 350</p>
+            <select class="slot-dropdown">
+              <option value="Slot-1. Species">1. Species</option>
+              <option value="Slot-1. Decrypto">2. Decrypto</option>
+              <option value="Slot-1. World Wonders">3. World Wonders</option>
+              <option value="Slot-1. Sounds Fishy">4. Sounds Fishy</option>
+              <option value="Slot-1. San Francisco">5. San Francisco</option>
+              <!-- Add more slot options here -->
+            </select><br><br>
+            <button onclick="addToCart(this)">Add to Cart</button>
+          </div>
+          <div class="slot" data-price="375" data-booked="false">
+            <h3>Game Slot 2</h3>
+            <p>Date: 11th March 2024</p>
+            <p>Time: 2:00 PM - 4:00 PM</p>
+            <p>Price: Rs. 375</p>
+            <select class="slot-dropdown">
+              <option value="Slot-2. Species">1. Species</option>
+              <option value="Slot-2.. Decrypto">2. Decrypto</option>
+              <option value="Slot-2.. World Wonders">3. World Wonders</option>
+              <option value="Slot-2.. Sounds Fishy">4. Sounds Fishy</option>
+              <option value="Slot-2.. San Francisco">5. San Francisco</option>
+              <!-- Add more slot options here -->
+            </select><br><br>
+            <button onclick="addToCart(this)">Add to Cart</button>
+          </div>
+          <!-- Add more game slots here -->
+        </div>
+        <div class="cart">
+          <h2>Cart</h2>
+          <ul id="cart-items">
+            <!-- Cart items will be dynamically added here -->
+          </ul>
+          <p>Your Cart</p>
+          <p>Total: <span id="total-price">$0</span></p>
+          <button id="proceed-to-pay-button" onclick="proceedToPay()">Proceed to pay</button>
+        </div>
+      </div>
+      
+    </body>
+    </html>
+    
+    
+ 
+  
+    
+    
+      <footer class="copyright_div">
+        <a href="https://github.com/" class="copyright">Made by Game bonanZa 2023 - Edited by [Swetha & Gopika] [2024]</a>
+      </footer>
+    </body>
+  </html>
